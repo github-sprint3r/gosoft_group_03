@@ -2,7 +2,7 @@
 Library    Selenium2Library    
 
 *** Variables ***
-${URL_Search}    http://27.254.142.75/ParkKoWeb/...
+${URL_Search}   http://27.254.142.75/ParkKoWeb/ParkKo_Search.jsp
 
 *** Testcases ***
 ทดสอบการคำนวณเงินทอน สมเกียรติ ปุ๋ยสูงเนิน
@@ -10,36 +10,7 @@ ${URL_Search}    http://27.254.142.75/ParkKoWeb/...
     Input Text    txtCarId    สฬ5420
     Select From List By Value    lstProvince    กรุงเทพมหานคร
     Click Button    ค้นหา
-    Wait Until Page Contains    สมเกียรติ    
-    Wait Until Page Contains    ปุ๋ยสูงเนิน
-    Wait Until Page Contains    สฬ๕๔๒๐
-    Wait Until Page Contains    กรุงเทพมหานคร
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๖.๐๒ น.
-    Wait Until Page Contains    ๖ ชั่วโมง
-    Input Text    txtRecAmt    100
-    Click Button    รับเงิน
-    Wait Until Page Contains    ๗๐ บาท
-    Wait Until Page Contains    ๑๐๐ บาท
-    Wait Until Page Contains    ๓๐ บาท
+    
     Close All Browsers
 
-ทดสอบการคำนวณเงินทอน ธวัชชัย จงสุวรรณไพศาล
-    Open Browser    ${URL_Search}
-    Input Text    txtCarId    ณข9620
-    Select From List By Value    lstProvince    ลำปาง
-    Click Button    ค้นหา
-    Wait Until Page Contains    ธวัชชัย    
-    Wait Until Page Contains    จงสุวรรณไพศาล
-    Wait Until Page Contains    ณข๙๖๒๐
-    Wait Until Page Contains    ลำปาง
-    Wait Until Page Contains    วัน พฤหัสบดี ที่ ๒๕ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๒๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๖.๓๐ น.
-    Wait Until Page Contains    ๗ ชั่วโมง
-    Input Text    txtRecAmt    100
-    Click Button    รับเงินป
-    Wait Until Page Contains    ๗๐ บาท
-    Wait Until Page Contains    ๑๐๐ บาท
-    Wait Until Page Contains    ๓๐ บาท
-    Close All Browsers
 *** Keyword ***
