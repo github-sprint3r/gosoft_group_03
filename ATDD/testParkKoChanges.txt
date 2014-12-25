@@ -7,7 +7,7 @@ ${URL_Search}   http://27.254.142.75/ParkKoWeb/ParkKo_Search.jsp
 *** Testcases ***
 ทดสอบการคำนวณเงินทอน สมเกียรติ ปุ๋ยสูงเนิน
     Open Browser    ${URL_Search}
-    Input Text    txtCarId    สฬ5420
+    Input Text    txtCarID    สฬ5420
     Select From List By Value    lstProvince    กรุงเทพมหานคร
     Click Button    ค้นหา
     
