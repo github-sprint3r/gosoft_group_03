@@ -30,7 +30,7 @@
     <![endif]-->
   </head>
 
-  <body role="document"  >
+  <body role="document" >
   <div class="container-fluid">
 
 
@@ -136,7 +136,7 @@
  
   <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
-  	<button type="submit" class="btn btn-primary">ค้นหา</button>
+  	<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> ค้นหา</button>
   </div>
   </div>
   </form>
