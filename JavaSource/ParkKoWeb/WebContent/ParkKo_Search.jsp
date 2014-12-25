@@ -1,8 +1,9 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -38,9 +39,9 @@
   
   <form class="form-horizontal">
   <div class="form-group">
-  <label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
+  <label for="txtCarId" class="col-sm-2 control-label">ทะเบียนรถ</label>
   <div class="col-sm-10">
-   <input id="txtCarID"  type="text" class="form-control" placeholder="กรุณาระบุทะเบียนรถ"> 
+   <input id="txtCarId"  type="text" class="form-control" placeholder="กรุณาระบุทะเบียนรถ"> 
    </div>
   </div>
   
