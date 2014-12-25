@@ -1,0 +1,7 @@
+<classpath>
+  <container id="ParkKoWeb!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/gosoft_group_03/Source/ParkKoWeb/WebContent/WEB-INF/lib/ParkKoUtil.jar">
+      <source-attachment-path>/ParkKoUtil</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

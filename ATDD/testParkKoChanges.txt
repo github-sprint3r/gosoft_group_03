@@ -1,45 +1,45 @@
-*** Settings ***
+ï»¿*** Settings ***
 Library    Selenium2Library    
 
 *** Variables ***
 ${URL_Search}    http://27.254.142.75/ParkKoWeb/...
 
 *** Testcases ***
-·´ÊÍº¡ÒÃ¤Ó¹Ç³à§Ô¹·Í¹ ÊÁà¡ÕÂÃµÔ »ØëÂÊÙ§à¹Ô¹
+à¸—à¸”à¸ªà¸­à¸šà¸à¸²à¸£à¸„à¸³à¸™à¸§à¸“à¹€à¸‡à¸´à¸™à¸—à¸­à¸™ à¸ªà¸¡à¹€à¸à¸µà¸¢à¸£à¸•à¸´ à¸›à¸¸à¹‹à¸¢à¸ªà¸¹à¸‡à¹€à¸™à¸´à¸™
     Open Browser    ${URL_Search}
-    Input Text    txtCarId    ÊÌ5420
-    Select From List By Value    lstProvince    ¡ÃØ§à·¾ÁËÒ¹¤Ã
-    Click Button    ¤é¹ËÒ
-    Wait Until Page Contains    ÊÁà¡ÕÂÃµÔ    
-    Wait Until Page Contains    »ØëÂÊÙ§à¹Ô¹
-    Wait Until Page Contains    ÊÌõôòğ
-    Wait Until Page Contains    ¡ÃØ§à·¾ÁËÒ¹¤Ã
-    Wait Until Page Contains    ÇÑ¹ ÈØ¡Ãì ·Õè òö ¸Ñ¹ÇÒ¤Á ¾.È. òõõ÷ àÇÅÒ ññ.ğğ ¹.
-    Wait Until Page Contains    ÇÑ¹ ÈØ¡Ãì ·Õè òö ¸Ñ¹ÇÒ¤Á ¾.È. òõõ÷ àÇÅÒ ñö.ğò ¹.
-    Wait Until Page Contains    ö ªÑèÇâÁ§
+    Input Text    txtCarId    à¸ªà¸¬5420
+    Select From List By Value    lstProvince    à¸à¸£à¸¸à¸‡à¹€à¸—à¸à¸¡à¸«à¸²à¸™à¸„à¸£
+    Click Button    à¸„à¹‰à¸™à¸«à¸²
+    Wait Until Page Contains    à¸ªà¸¡à¹€à¸à¸µà¸¢à¸£à¸•à¸´    
+    Wait Until Page Contains    à¸›à¸¸à¹‹à¸¢à¸ªà¸¹à¸‡à¹€à¸™à¸´à¸™
+    Wait Until Page Contains    à¸ªà¸¬à¹•à¹”à¹’à¹
+    Wait Until Page Contains    à¸à¸£à¸¸à¸‡à¹€à¸—à¸à¸¡à¸«à¸²à¸™à¸„à¸£
+    Wait Until Page Contains    à¸§à¸±à¸™ à¸¨à¸¸à¸à¸£à¹Œ à¸—à¸µà¹ˆ à¹’à¹– à¸˜à¸±à¸™à¸§à¸²à¸„à¸¡ à¸.à¸¨. à¹’à¹•à¹•à¹— à¹€à¸§à¸¥à¸² à¹‘à¹‘.à¹à¹ à¸™.
+    Wait Until Page Contains    à¸§à¸±à¸™ à¸¨à¸¸à¸à¸£à¹Œ à¸—à¸µà¹ˆ à¹’à¹– à¸˜à¸±à¸™à¸§à¸²à¸„à¸¡ à¸.à¸¨. à¹’à¹•à¹•à¹— à¹€à¸§à¸¥à¸² à¹‘à¹–.à¹à¹’ à¸™.
+    Wait Until Page Contains    à¹– à¸Šà¸±à¹ˆà¸§à¹‚à¸¡à¸‡
     Input Text    txtRecAmt    100
-    Click Button    ÃÑºà§Ô¹
-    Wait Until Page Contains    ÷ğ ºÒ·
-    Wait Until Page Contains    ñğğ ºÒ·
-    Wait Until Page Contains    óğ ºÒ·
+    Click Button    à¸£à¸±à¸šà¹€à¸‡à¸´à¸™
+    Wait Until Page Contains    à¹—à¹ à¸šà¸²à¸—
+    Wait Until Page Contains    à¹‘à¹à¹ à¸šà¸²à¸—
+    Wait Until Page Contains    à¹“à¹ à¸šà¸²à¸—
     Close All Browsers
 
-·´ÊÍº¡ÒÃ¤Ó¹Ç³à§Ô¹·Í¹ ¸ÇÑªªÑÂ ¨§ÊØÇÃÃ³ä¾ÈÒÅ
+à¸—à¸”à¸ªà¸­à¸šà¸à¸²à¸£à¸„à¸³à¸™à¸§à¸“à¹€à¸‡à¸´à¸™à¸—à¸­à¸™ à¸˜à¸§à¸±à¸Šà¸Šà¸±à¸¢ à¸ˆà¸‡à¸ªà¸¸à¸§à¸£à¸£à¸“à¹„à¸à¸¨à¸²à¸¥
     Open Browser    ${URL_Search}
-    Input Text    txtCarId    ³¢9620
-    Select From List By Value    lstProvince    ÅÓ»Ò§
-    Click Button    ¤é¹ËÒ
-    Wait Until Page Contains    ¸ÇÑªªÑÂ    
-    Wait Until Page Contains    ¨§ÊØÇÃÃ³ä¾ÈÒÅ
-    Wait Until Page Contains    ³¢ùöòğ
-    Wait Until Page Contains    ÅÓ»Ò§
-    Wait Until Page Contains    ÇÑ¹ ¾ÄËÑÊº´Õ ·Õè òõ ¸Ñ¹ÇÒ¤Á ¾.È. òõõ÷ àÇÅÒ òñ.ğğ ¹.
-    Wait Until Page Contains    ÇÑ¹ ÈØ¡Ãì ·Õè òö ¸Ñ¹ÇÒ¤Á ¾.È. òõõ÷ àÇÅÒ ö.óğ ¹.
-    Wait Until Page Contains    ÷ ªÑèÇâÁ§
+    Input Text    txtCarId    à¸“à¸‚9620
+    Select From List By Value    lstProvince    à¸¥à¸³à¸›à¸²à¸‡
+    Click Button    à¸„à¹‰à¸™à¸«à¸²
+    Wait Until Page Contains    à¸˜à¸§à¸±à¸Šà¸Šà¸±à¸¢    
+    Wait Until Page Contains    à¸ˆà¸‡à¸ªà¸¸à¸§à¸£à¸£à¸“à¹„à¸à¸¨à¸²à¸¥
+    Wait Until Page Contains    à¸“à¸‚à¹™à¹–à¹’à¹
+    Wait Until Page Contains    à¸¥à¸³à¸›à¸²à¸‡
+    Wait Until Page Contains    à¸§à¸±à¸™ à¸à¸¤à¸«à¸±à¸ªà¸šà¸”à¸µ à¸—à¸µà¹ˆ à¹’à¹• à¸˜à¸±à¸™à¸§à¸²à¸„à¸¡ à¸.à¸¨. à¹’à¹•à¹•à¹— à¹€à¸§à¸¥à¸² à¹’à¹‘.à¹à¹ à¸™.
+    Wait Until Page Contains    à¸§à¸±à¸™ à¸¨à¸¸à¸à¸£à¹Œ à¸—à¸µà¹ˆ à¹’à¹– à¸˜à¸±à¸™à¸§à¸²à¸„à¸¡ à¸.à¸¨. à¹’à¹•à¹•à¹— à¹€à¸§à¸¥à¸² à¹–.à¹“à¹ à¸™.
+    Wait Until Page Contains    à¹— à¸Šà¸±à¹ˆà¸§à¹‚à¸¡à¸‡
     Input Text    txtRecAmt    100
-    Click Button    ÃÑºà§Ô¹»
-    Wait Until Page Contains    ÷ğ ºÒ·
-    Wait Until Page Contains    ñğğ ºÒ·
-    Wait Until Page Contains    óğ ºÒ·
+    Click Button    à¸£à¸±à¸šà¹€à¸‡à¸´à¸™à¸›
+    Wait Until Page Contains    à¹—à¹ à¸šà¸²à¸—
+    Wait Until Page Contains    à¹‘à¹à¹ à¸šà¸²à¸—
+    Wait Until Page Contains    à¹“à¹ à¸šà¸²à¸—
     Close All Browsers
 *** Keyword ***

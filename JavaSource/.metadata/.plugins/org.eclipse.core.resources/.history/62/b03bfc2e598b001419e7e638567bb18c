@@ -1,0 +1,67 @@
+package db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.CallableStatement;
+
+import bean.User;
+
+public class DBData {
+	// JDBC driver name and database URL
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
+	
+	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM USER WHERE CAR_ID = ? AND PROVINCE = ? AND NAME = ? ";
+
+	// Database credentials
+	static final String USER = "root";
+	static final String PASS = "";
+
+	private static Connection conn = null;
+	private CallableStatement stmt = null;
+
+	public DBData() {
+
+	}
+
+	public static Connection getConnection() {
+
+		try {
+			if(conn==null){
+				Class.forName("com.mysql.jdbc.Driver");
+				conn = DriverManager.getConnection(DB_URL,USER,PASS);
+			}
+			
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		return conn;
+
+	}
+	
+	
+	
+	public User getUser(String carId, String province, String name){
+		User member = new User();
+		
+		stmt = conn.prepareCall();
+		stmt.
+		
+		
+		return member;
+	}
+	
+	protected String getSQLUser(String carId, String province, String name){
+		StringBuilder sql = new StringBuilder("SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM USER WHERE CAR_ID = '");
+		sql.append(carId);
+		sql.append("' AND PROVINCE = '");
+		sql.append(province);
+		sql.append("' AND NAME = '");
+		sql.append(name);
+		sql.append("'");
+		return sql.toString();
+	}
+}

@@ -1,0 +1,116 @@
+package db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import bean.User;
+
+public class DBData {
+	// JDBC driver name and database URL
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
+	
+	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM USER WHERE CAR_ID = ? AND PROVINCE = ? AND NAME = ? ";
+
+	// Database credentials
+	static final String USER = "root";
+	static final String PASS = "";
+
+	private static Connection conn = null;
+	private Statement  stmt = null;
+	private ResultSet rs = null;
+
+	public DBData() {
+
+	}
+
+	public static Connection getConnection() {
+
+		try {
+			if(conn==null){
+				Class.forName("com.mysql.jdbc.Driver");
+				conn = DriverManager.getConnection(DB_URL,USER,PASS);
+			}
+			
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		return conn;
+
+	}
+	
+	
+	
+	public User getUser(String carId, String province, String name){
+		User member = new User();
+		
+		try {
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(getSQLUser(carId,  province,  name));
+			
+			if(rs!=null&&rs.next()){
+				member.setCarId(rs.getString("CAR_ID"));
+				member.setProvince(rs.getString("PROVINCE"));
+				member.setName(rs.getString("NAME"));
+				member.setSurname(rs.getString("SURNAME"));
+				member.setPicture(rs.getString("PICTURE"));
+				
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally{
+			close();
+		}
+		
+		
+		return member;
+	}
+	
+	protected String getSQLUser(String carId, String province, String name){
+		StringBuilder sql = new StringBuilder("SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM USER WHERE CAR_ID = '");
+		sql.append(carId);
+		sql.append("' AND PROVINCE = '");
+		sql.append(province);
+		sql.append("' AND NAME = '");
+		sql.append(name);
+		sql.append("'");
+		return sql.toString();
+	}
+	
+	protected void close(){
+		if(rs!=null){
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		if(stmt!=null){
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		if(conn!=null){
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+}

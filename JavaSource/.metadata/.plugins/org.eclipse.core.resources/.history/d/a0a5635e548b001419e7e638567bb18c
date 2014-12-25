@@ -1,0 +1,15 @@
+package bean;
+
+public class User {
+	private String carId;
+	private String province;
+	private String name;
+	private String surname;
+	private String picture;
+
+	public User() {
+		
+	}
+
+	
+}
