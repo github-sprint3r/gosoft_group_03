@@ -41,12 +41,12 @@ public class UserServlet extends HttpServlet {
 	}
 	
 	protected void doUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setHeader("Content-Type", "text/html; charset=TIS-620");
+		response.setHeader("Content-Type", "text/html; charset=UTF-8");
 		PrintWriter pw = response.getWriter();
 		//String cardID = new String("ณข ๙๖๒๐".getBytes("UTF-8"),"TIS-620");
 		DBData data = new DBData();
 		pw.append("<p> "+ data.getUser("ณข ๙๖๒๐", "ลำปาง", "ธวัชชัย").toString());
-		pw.append("<p> "+ data.getUser("111", "111", "111").toString());
+		pw.append("<p> "+ data.getParkTransaction("ณข ๙๖๒๐", "ลำปาง", "ธวัชชัย").toString());
 		//pw.append("<p> test");
 		pw.flush();
 		pw.close();
