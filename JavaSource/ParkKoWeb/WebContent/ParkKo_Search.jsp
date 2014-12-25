@@ -30,18 +30,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body role="document"  >
   <div class="container-fluid">
 
 
   
   
-  <form class="form-horizontal">
+  <form class="form-horizontal" action="/ParkKoWeb/UserServlet" method="post">
   <div class="form-group">
-  <label for="txtCarId" class="col-sm-2 control-label">ทะเบียนรถ</label>
+  <label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
   <div class="col-sm-10">
-   <input id="txtCarId"  type="text" class="form-control" placeholder="กรุณาระบุทะเบียนรถ"> 
+   <input id="txtCarID"  type="text" class="form-control" placeholder="กรุณาระบุทะเบียนรถ"> 
    </div>
   </div>
   
