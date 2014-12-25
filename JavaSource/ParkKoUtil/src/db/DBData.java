@@ -1,23 +1,23 @@
 package db;
 
-import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
+import bean.ParkTransaction;
 import bean.User;
 
 public class DBData {
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	//static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
-	static final String DB_URL = "jdbc:mysql://27.254.142.75/ParkKoDB";
+	static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
+	//static final String DB_URL = "jdbc:mysql://27.254.142.75/ParkKoDB";
 	
 	//static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User WHERE CAR_ID = ? AND PROVINCE = ? AND NAME = ? ";
-	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User WHERE CAR_ID =?";
+	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User";
+	static final String SQL_PARK_TRANSACTION_PK = "SELECT * FROM ParkKoDB.Park_Transaction";
 
 	// Database credentials
 	static final String USER = "root";
@@ -55,7 +55,12 @@ public class DBData {
 	
 	
 	public User getUser(String carId, String province, String name){
-		User member = new User();
+		User memberDB = null;
+		
+		User memberExpect = new User();
+		memberExpect.setCarId(carId);
+		memberExpect.setProvince(province);
+		memberExpect.setName(name);
 		
 		try {
 			initConnection();
@@ -66,14 +71,18 @@ public class DBData {
 			//rs = stmt.executeQuery();
 			rs = stmt.executeQuery(getSQLUser(carId,  province,  name));
 			
-			if(rs!=null&&rs.next()){
-				member.setCarId(rs.getString("CAR_ID"));
-				member.setProvince(rs.getString("PROVINCE"));
-				member.setName(rs.getString("NAME"));
-				member.setSurname(rs.getString("SURNAME"));
-				member.setPicture(rs.getString("PICTURE"));
+			while(rs!=null&&rs.next()&&(!memberExpect.equalsKey(memberDB))){
+				memberDB = new User();
+				memberDB.setCarId(rs.getString("CAR_ID"));
+				memberDB.setProvince(rs.getString("PROVINCE"));
+				memberDB.setName(rs.getString("NAME"));
+				memberDB.setSurname(rs.getString("SURNAME"));
+				memberDB.setPicture(rs.getString("PICTURE"));
 				
 			}
+//			boolean equal = (carId.equals(memberDB.getCarId()));
+//			
+//			System.out.println(equal);
 			
 		} catch (SQLException e) {
 			
@@ -82,12 +91,74 @@ public class DBData {
 			close();
 		}
 		
+		if(memberDB.equalsKey(memberExpect)){
+			return memberDB;
+		}else{
+			return new User();
+		}
 		
-		return member;
+	}
+	
+	public ParkTransaction getParkTransaction(String carId, String province, String name){
+		User memberDB = null;
+		ParkTransaction transDB = new ParkTransaction();
+		
+		User memberExpect = new User();
+		memberExpect.setCarId(carId);
+		memberExpect.setProvince(province);
+		memberExpect.setName(name);
+		
+//		ParkTransaction transExpect = new ParkTransaction();
+//		transExpect.setUser(memberExpect);
+		
+		try {
+			initConnection();
+			stmt = conn.createStatement();
+//			stmt.setString(1, carId);
+//			stmt.setString(2, province);
+//			stmt.setString(3, name);
+			//rs = stmt.executeQuery();
+			rs = stmt.executeQuery(getSQLParkTransaction(carId,  province,  name));
+			
+			while(rs!=null&&rs.next()&&(!memberExpect.equalsKey(memberDB))){
+				memberDB = new User();
+				memberDB.setCarId(rs.getString("CAR_ID"));
+				memberDB.setProvince(rs.getString("PROVINCE"));
+				memberDB.setName(rs.getString("NAME"));
+				
+				transDB.setCarId(rs.getString("CAR_ID"));
+				transDB.setProvince(rs.getString("PROVINCE"));
+				transDB.setName(rs.getString("NAME"));
+				transDB.setStartTime(rs.getTimestamp("START_TIME"));
+				transDB.setEndTime(rs.getTimestamp("END_TIME"));
+				
+				transDB.setUser(memberDB);
+				
+				
+			}
+//			boolean equal = (carId.equals(memberDB.getCarId()));
+//			
+//			System.out.println(equal);
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally{
+			close();
+		}
+		
+		if(memberDB.equalsKey(memberExpect)){
+			return transDB;
+		}else{
+			return new ParkTransaction();
+		}
+		
 	}
 	
 	protected String getSQLUser(String carId, String province, String name){
-		StringBuilder sql = new StringBuilder("SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User WHERE CAR_ID = '");
+		return SQL_USER_PK;
+		
+	/*	StringBuilder sql = new StringBuilder("SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User WHERE CAR_ID = '");
 		sql.append(carId);
 		//sql.append("'");
 		sql.append("' AND PROVINCE = '");
@@ -101,7 +172,10 @@ public class DBData {
 //		} catch (UnsupportedEncodingException e) {
 //			e.printStackTrace();
 //		}
-		return sql.toString();
+		return sql.toString();*/
+	}
+	protected String getSQLParkTransaction(String carId, String province, String name){
+		return SQL_PARK_TRANSACTION_PK;
 	}
 	
 	protected void close(){
@@ -129,6 +203,30 @@ public class DBData {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public Connection getConn() {
+		return conn;
+	}
+
+	public void setConn(Connection conn) {
+		this.conn = conn;
+	}
+
+	public Statement getStmt() {
+		return stmt;
+	}
+
+	public void setStmt(Statement stmt) {
+		this.stmt = stmt;
+	}
+
+	public ResultSet getRs() {
+		return rs;
+	}
+
+	public void setRs(ResultSet rs) {
+		this.rs = rs;
 	}
 	
 	
