@@ -3,8 +3,6 @@ Library    Selenium2Library
 
 *** Variables ***
 ${URL_Search}    http://27.254.142.75/ParkKoWeb/...
-${URL_Recieve}    http://27.254.142.75/ParkKoWeb/...
-${URL_Changes}    http://27.254.142.75/ParkKoWeb/...
 
 *** Testcases ***
 ทดสอบการคำนวณเงินทอน สมเกียรติ ปุ๋ยสูงเนิน
@@ -38,10 +36,10 @@ ${URL_Changes}    http://27.254.142.75/ParkKoWeb/...
     Wait Until Page Contains    วัน พฤหัสบดี ที่ ๒๕ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๒๑.๐๐ น.
     Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๖.๓๐ น.
     Wait Until Page Contains    ๗ ชั่วโมง
-    Input Text    txtRecAmt    1000
-    Click Button    รับเงิน
-    Wait Until Page Contains    ๘๔๐ บาท
-    Wait Until Page Contains    ๑,๐๐๐ บาท
-    Wait Until Page Contains    ๑๖๐ บาท
+    Input Text    txtRecAmt    100
+    Click Button    รับเงินป
+    Wait Until Page Contains    ๗๐ บาท
+    Wait Until Page Contains    ๑๐๐ บาท
+    Wait Until Page Contains    ๓๐ บาท
     Close All Browsers
 *** Keyword ***
