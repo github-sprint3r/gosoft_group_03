@@ -1,3 +1,0 @@
-INDEX VERSION 1.126
-D:\gosoft_group_03\Source\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1554775257.index
-\ParkKoWeb\src

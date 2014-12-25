@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: ParkKoUtil.jar 
- mysql-connector-java-5.1.34-bin.jar 
- 
