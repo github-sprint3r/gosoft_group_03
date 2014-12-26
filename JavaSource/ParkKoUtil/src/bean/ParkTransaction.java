@@ -1,5 +1,5 @@
 package bean;
-import java.util.*;
+
 import java.sql.Timestamp;
 
 public class ParkTransaction {
@@ -10,46 +10,58 @@ public class ParkTransaction {
 	private Timestamp startTime;
 	private Timestamp endTime;
 	private User user;
-	
+
 	public ParkTransaction() {
 	}
+
 	public String getCarId() {
 		return carId;
 	}
+
 	public void setCarId(String carId) {
 		this.carId = carId;
 	}
+
 	public String getProvince() {
 		return province;
 	}
+
 	public void setProvince(String province) {
 		this.province = province;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public Timestamp getStartTime() {
 		return startTime;
 	}
+
 	public void setStartTime(Timestamp startTime) {
 		this.startTime = startTime;
 	}
+
 	public Timestamp getEndTime() {
 		return endTime;
 	}
+
 	public void setEndTime(Timestamp endTime) {
 		this.endTime = endTime;
 	}
+
 	public User getUser() {
 		return user;
 	}
+
 	public void setUser(User user) {
 		this.user = user;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -64,6 +76,7 @@ public class ParkTransaction {
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -105,12 +118,12 @@ public class ParkTransaction {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "ParkTransaction [carId=" + carId + ", province=" + province
 				+ ", name=" + name + ", startTime=" + startTime + ", endTime="
 				+ endTime + ", user=" + user + "]";
 	}
-	
-	
+
 }
