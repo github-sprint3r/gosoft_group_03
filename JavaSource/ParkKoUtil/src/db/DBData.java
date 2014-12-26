@@ -10,7 +10,6 @@ import bean.ParkTransaction;
 import bean.User;
 
 public class DBData {
-	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
 	//static final String DB_URL = "jdbc:mysql://27.254.142.75/ParkKoDB";
@@ -19,7 +18,6 @@ public class DBData {
 	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User";
 	static final String SQL_PARK_TRANSACTION_PK = "SELECT * FROM ParkKoDB.Park_Transaction";
 
-	// Database credentials
 	static final String USER = "root";
 	static final String PASS = "";
 
@@ -35,11 +33,8 @@ public class DBData {
 
 		try {
 			if(conn==null || conn.isClosed()){
-				//Class.forName("com.mysql.jdbc.Driver");
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 				conn = DriverManager.getConnection(DB_URL,USER,PASS);
-//				conn = DriverManager.getConnection("jdbc:mysql://27.254.142.75/ParkKoDB?" +
-//                        "user=root&password=");
 			}
 			
 
@@ -48,7 +43,6 @@ public class DBData {
 			e.printStackTrace();
 		}
 
-		//return conn;
 
 	}
 	
@@ -65,10 +59,6 @@ public class DBData {
 		try {
 			initConnection();
 			stmt = conn.createStatement();
-//			stmt.setString(1, carId);
-//			stmt.setString(2, province);
-//			stmt.setString(3, name);
-			//rs = stmt.executeQuery();
 			rs = stmt.executeQuery(getSQLUser(carId,  province,  name));
 			
 			while(rs!=null&&rs.next()&&(!memberExpect.equalsKey(memberDB))){
@@ -80,9 +70,6 @@ public class DBData {
 				memberDB.setPicture(rs.getString("PICTURE"));
 				
 			}
-//			boolean equal = (carId.equals(memberDB.getCarId()));
-//			
-//			System.out.println(equal);
 			
 		} catch (SQLException e) {
 			
@@ -108,16 +95,10 @@ public class DBData {
 		memberExpect.setProvince(province);
 		memberExpect.setName(name);
 		
-//		ParkTransaction transExpect = new ParkTransaction();
-//		transExpect.setUser(memberExpect);
 		
 		try {
 			initConnection();
 			stmt = conn.createStatement();
-//			stmt.setString(1, carId);
-//			stmt.setString(2, province);
-//			stmt.setString(3, name);
-			//rs = stmt.executeQuery();
 			rs = stmt.executeQuery(getSQLParkTransaction(carId,  province,  name));
 			
 			while(rs!=null&&rs.next()&&(!memberExpect.equalsKey(memberDB))){
@@ -136,9 +117,6 @@ public class DBData {
 				
 				
 			}
-//			boolean equal = (carId.equals(memberDB.getCarId()));
-//			
-//			System.out.println(equal);
 			
 		} catch (SQLException e) {
 			
