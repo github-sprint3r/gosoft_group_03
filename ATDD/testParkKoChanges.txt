@@ -20,45 +20,10 @@ ${URL_Search}   http://27.254.142.75/web/ParkKo_Search.jsp
     Input Text    txtCarID    สฬ5420
     Select From List By Value    lstProvince    กรุงเทพมหานคร
     Click Button    btnSearch
-    Wait Until Page Contains    สมเกียรติ    
-    Wait Until Page Contains    ปุ๋ยสูงเนิน
-    Wait Until Page Contains    สฬ๕๔๒๐
-    Wait Until Page Contains    กรุงเทพมหานคร
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๖.๐๒ น.
-    Wait Until Page Contains    ๖ 
-    Input Text    TxTRecAmt    100
-    Click Button    btnReceive
-    Wait Until Page Contains    สมเกียรติ    
-    Wait Until Page Contains    ปุ๋ยสูงเนิน
-    Wait Until Page Contains    สฬ๕๔๒๐
-    Wait Until Page Contains    กรุงเทพมหานคร
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๑๖.๐๒ น.
-    Wait Until Page Contains    ๗๐
-    Wait Until Page Contains    ๑๐๐ 
-    Wait Until Page Contains    ๓๐
-    
+
 แสดงข้อมูลและรับเงินของธวัชชัย จงสุวรรณไพศาล
     Open Browser    ${URL_Search}
     Input Text    txtCarID    ณข9620
     Select From List By Value    lstProvince    ลำปาง
     Click Button    btnSearch
-    Wait Until Page Contains    ธวัชชัย    
-    Wait Until Page Contains    จงสุวรรณไพศาล
-    Wait Until Page Contains    ณข๙๖๒๐
-    Wait Until Page Contains    ลำปาง
-    Wait Until Page Contains    วัน พฤหัสบดี ที่ ๒๕ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๒๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๖.๓๐ น.
-    Wait Until Page Contains    ๗ 
-    Input Text    txtRecAmt    1000
-    Click Button    btnReceive
-    Wait Until Page Contains    ธวัชชัย    
-    Wait Until Page Contains    จงสุวรรณไพศาล
-    Wait Until Page Contains    ณข๙๖๒๐
-    Wait Until Page Contains    ลำปาง
-    Wait Until Page Contains    วัน พฤหัสบดี ที่ ๒๕ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๒๑.๐๐ น.
-    Wait Until Page Contains    วัน ศุกร์ ที่ ๒๖ ธันวาคม พ.ศ. ๒๕๕๗ เวลา ๖.๓๐ น.
-    Wait Until Page Contains    ๘๔๐
-    Wait Until Page Contains    ๑๐๐๐
-    Wait Until Page Contains    ๑๖๐
+    
