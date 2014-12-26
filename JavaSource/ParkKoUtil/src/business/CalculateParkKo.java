@@ -6,13 +6,13 @@ import bean.TimeSpecial;
 
 public class CalculateParkKo {
 	public static HashMap<Timestamp,TimeSpecial> dateTimeStampMap = new HashMap<Timestamp,TimeSpecial>();
-	/*
+	
 	static{
-		String timeExtraPriceStart1 = "25/12/2014 03:00";
-		String timeExtraPriceEnd1 = "25/12/2014 06:00";
+		String timeExtraPriceStart1 = "25/12/2014 03:00 AM";
+		String timeExtraPriceEnd1 = "25/12/2014 06:00 AM";
 		
-		String timeExtraPriceStart2 = "26/12/2014 03:00";
-		String timeExtraPriceEnd2 = "26/12/2014 06:00";
+		String timeExtraPriceStart2 = "26/12/2014 03:00 AM";
+		String timeExtraPriceEnd2 = "26/12/2014 06:00 AM";
 		
 		TimeSpecial special = new TimeSpecial();
 		special.setStrStartTime(timeExtraPriceStart1);
@@ -35,7 +35,7 @@ public class CalculateParkKo {
 		special.setEndTime(tmp);		
 		
 		dateTimeStampMap.put(tmp, special);
-	}*/
+	}
 
 	public CalculateParkKo() {
 	}
@@ -52,5 +52,16 @@ public class CalculateParkKo {
 		return (int) totalTime;
 	}
 
+	public int calculateSpecialHour(Timestamp startTime, Timestamp endTime) {
+		int totalTime = 0;
+		for(Timestamp time : dateTimeStampMap.keySet()){
+			TimeSpecial special = dateTimeStampMap.get(time);
+			if(startTime.before(special.getStartTime())&&endTime.after(special.getEndTime())){
+				totalTime = totalTime + 3;
+			}
+		}
+		
+		return totalTime;
+	}
 	
 }
