@@ -39,7 +39,7 @@
 </style>
 </head>
 
-<body role="document" background="Main_BG.png">
+<body role="document" style="background-color: #ffcccc">
 	<div class="container-fluid">
 
 		<form>
@@ -52,7 +52,8 @@
 						</td>
 						<td style="background-color: #ff93a9">
 							<div align="center">
-								<font color="white" size="6">สวัสดี</font>
+								<H1>Park-Ko</H1>
+								<font color="black" size="6">สวัสดี</font>
 							</div>
 						</td>
 					</tr>
@@ -61,12 +62,12 @@
 						<td style="background-color: white">
 							<div class="row">
 								<div class="col-md-4">
-									<label for="TxTName"><font color="#66CCCC">ชื่อ</font></label>
+									<label for="TxTName"><font color="black">ชื่อ</font></label>
 									<label id="LbName" name="LbName"> <% %>
 									</label>
 								</div>
 								<div class="col-md-4">
-									<label for="TxTSurname"><font color="#66CCCC">นามสกุล</font></label>
+									<label for="TxTSurname"><font color="black">นามสกุล</font></label>
 									<label id="LbSurname" name="LbSurname"> <% %>
 									</label>
 								</div>
@@ -76,53 +77,53 @@
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTCarID"><font
-								color="#66CCCC">ทะเบียนรถ</font></label> <label id="LbCarId" name="LbCarId"> <% %>
+								color="black">ทะเบียนรถ</font></label> <label id="LbCarId" name="LbCarId"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTProvince"><font
-								color="#66CCCC">จังหวัด</font></label> <label id="LbProvice" name="LbProvice"> <% %>
+								color="black">จังหวัด</font></label> <label id="LbProvice" name="LbProvice"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTEntrytime"><font
-								color="#66CCCC">วัน เวลาเข้า</font></label> <label id="LbEntrytime" name="LbEntrytime">
+								color="black">วัน เวลาเข้า</font></label> <label id="LbEntrytime" name="LbEntrytime">
 								<% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTExittime"><font
-								color="#66CCCC">วัน เวลา ออก</font></label> <label id="LbExittime" name="LbExittime">
+								color="black">วัน เวลา ออก</font></label> <label id="LbExittime" name="LbExittime">
 								<% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="lbTotaltime"><font color="#FF6699">เวลาทั้งหมด</font></label>
+								<label for="lbTotaltime"><font color="black">เวลาทั้งหมด</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
 							<div align="center">
 								<label for="lbTotaltime" id="lbTotaltime" name="lbTotaltime"> <% %>
-								</label> <label><font color="#FF6699">ชั่วโมง</font></label>
+								</label> <label><font color="black">ชั่วโมง</font></label>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="TxTRecAmt"><font color="#FF6699">รับเงิน</font></label>
+								<label for="TxTRecAmt"><font color="black">รับเงิน</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
 							<div align="center">
 								<input id="TxTRecAmt" name="TxTRecAmt" for="LbRecAmt"> <% %>
-								<label><font color="#FF6699">บาท</font></label>
-								<button type="submit" class="btnReceive">รับเงิน</button> <% %>
+								<label><font color="black">บาท</font></label>
+								<button type="submit" class="btn btn-primary">รับเงิน</button> <% %>
 							</div>
 						</td>
 					</tr>

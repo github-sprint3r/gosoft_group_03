@@ -42,14 +42,14 @@
 }
 </style>
 </head>
-<body role="document" background="Main_BG.png">
+<body role="document" style="background-color: #ffcccc">
 
 	<table align="center" class="table table-striped">
 		<form class="form-horizontal" action="/web/ParkSearchServlet"
 			method="post">
 		<tr>
 			<td width="160" height="160" style="background-color: #ff93a9">
-				<img src="hellotopo.jpg" class="img-rounded">
+				<H1 align="center" >Park-Ko</H1>
 			</td>
 		</tr>
 
@@ -161,7 +161,7 @@
 			<td style="background-color: white">
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-primary">
+						<button id="btnSearch" type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 							ค้นหา
 						</button>
