@@ -29,6 +29,8 @@ public class ParkSearchServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setHeader("Content-Type", "text/html; charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		
 		String carId = request.getParameter("txtCarID");
 		String provice = request.getParameter("lstProvince");
 		
