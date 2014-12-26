@@ -7,6 +7,7 @@ import org.junit.Test;
 public class TestCalculateFee {
 
 	CalculateFee calculateFee = new CalculateFee();
+
 	@Test
 	public void seven_hours_in_normal_case_and_three_hours_in_abnormal_case_should_fees_equal_840_baht() {
 		int expectedResult = 840;
