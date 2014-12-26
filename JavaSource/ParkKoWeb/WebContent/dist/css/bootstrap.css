@@ -2848,8 +2848,8 @@ fieldset[disabled] .btn-default.active {
   background-color: #333;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
+  color: black;
+  background-color: #ff93a9;
   border-color: #2e6da4;
 }
 .btn-primary:hover,
