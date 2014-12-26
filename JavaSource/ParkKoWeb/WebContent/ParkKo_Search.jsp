@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="th">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-=======
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
->>>>>>> 0adb9aa2fce25801229b20eb6717ceda14c2ac18
-=======
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,48 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
->>>>>>> a20feb2193e568e38af3f9dd946f88ef49d02195
 
     <title>Park-Ko Search</title>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-   <!--  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
-   <!--  <link href="theme.css" rel="stylesheet"> -->
-
-  </head>
-
-  <body bgcolor="#FDC6D9" background-image="" >
-  <br>
- 
-  <br>
-  <div class="container-fluid">
-  <form class="form-horizontal">
-  <div class="form-group">
-  <label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
-  <div class="col-sm-10">
-   <input id="txtCarID"  type="text" class="form-control" placeholder="กรุณาระบุทะเบียนรถ"> 
-   </div>
-  </div>
-  
-  <div class="form-group">
-  <label for="lstProvince" class="col-sm-2 control-label">จังหวัด</label>
-=======
-<!-- Bootstrap core CSS -->
-<link href="dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap theme -->
-<link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
-=======
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
->>>>>>> a20feb2193e568e38af3f9dd946f88ef49d02195
 
     <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
@@ -181,14 +130,8 @@
       <option value="อื่นๆ">อื่นๆ</option>
 </select>
 
-<<<<<<< HEAD
-					</div>
-				</div>
->>>>>>> 0adb9aa2fce25801229b20eb6717ceda14c2ac18
-=======
     </div>
   </div>
->>>>>>> a20feb2193e568e38af3f9dd946f88ef49d02195
 
  
   <div class="form-group">
@@ -201,23 +144,5 @@
 </div>
         
 
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-  <div class="form-group">
-  <div class="col-sm-offset-2 col-sm-10">
-  	<button type="submit" class="btn btn-primary">
-  	<span class="glyphicon glyphicon-search" aria-hidden="true"></span> ค้นหา</button>
-  </div>
-  </div>
-  </form>
-=======
-	</div>
->>>>>>> 0adb9aa2fce25801229b20eb6717ceda14c2ac18
-
-
-</body>
-=======
   </body>
->>>>>>> a20feb2193e568e38af3f9dd946f88ef49d02195
 </html>
