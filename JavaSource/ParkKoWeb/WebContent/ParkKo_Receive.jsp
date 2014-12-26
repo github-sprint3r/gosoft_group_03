@@ -38,7 +38,7 @@
 }
 .btn-receive {
 	background-color:#ff93a9;
-	color:black;
+	color:white;
 }
 </style>
 </head>

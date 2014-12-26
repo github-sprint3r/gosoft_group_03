@@ -42,7 +42,7 @@
 }
 .btn-search {
 	background-color:#ff93a9;
-	color:black;
+	color:white;
 }
 </style>
 </head>
@@ -61,7 +61,7 @@
 			<td style="background-color: white">
 
 				<div class="form-group">
-					<label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
+					<label align="center"  for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
 					<div class="col-sm-10">
 						<input id="txtCarID" name="txtCarID"  type="text" class="form-control"
 							placeholder="กรุณาระบุทะเบียนรถ">
@@ -72,7 +72,7 @@
 		<tr>
 			<td style="background-color: white">
 				<div class="form-group">
-					<label for="lstProvince" class="col-sm-2 control-label">จังหวัด</label>
+					<label align="center"  for="lstProvince" class="col-sm-2 control-label">จังหวัด</label>
 					<div class="dropdown col-sm-10">
 						<select class="form-control" id="lstProvince" name="lstProvince">
 							<option value="111" selected>--------- เลือกจังหวัด
