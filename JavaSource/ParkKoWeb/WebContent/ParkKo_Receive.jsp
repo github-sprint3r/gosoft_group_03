@@ -102,13 +102,13 @@
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="TxTPayamountt"><font color="#FF6699">ค่าจอด</font></label>
+								<label for="lbTotaltime"><font color="#FF6699">เวลาทั้งหมด</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="LbPayamountt"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
+								<label for="lbTotaltime"> <% %>
+								</label> <label><font color="#FF6699">ชั่วโมง</font></label>
 							</div>
 						</td>
 					</tr>
@@ -120,25 +120,13 @@
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="LbRecAmt"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
+								<input id="TxTRecAmt" for="LbRecAmt"> <% %>
+								<label><font color="#FF6699">บาท</font></label>
+								<button type="submit" class="btnReceive">รับเงิน</button> <% %>
 							</div>
 						</td>
 					</tr>
-					<tr>
-						<td style="background-color: white">
-							<div align="center">
-								<label for="TxTChanges"><font color="#FF6699">รับเงิน</font></label>
-							</div>
-						</td>
-						<td style="background-color: white">
-							<div align="center">
-								<label for="LbChanges"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
-							</div>
-						</td>
-					</tr>
-
+					
 				</table>
 			</div>
 		</form>
