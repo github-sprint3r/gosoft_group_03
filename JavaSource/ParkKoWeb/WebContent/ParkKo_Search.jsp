@@ -40,16 +40,20 @@
 	align: center;
 	border-color: black;
 }
+.btn-primary {
+	background-color:pink;
+	color:black;
+}
 </style>
 </head>
-<body role="document" background="Main_BG.png">
+<body role="document" style="background-color: #ffcccc">
 
 	<table align="center" class="table table-striped">
-		<form class="form-horizontal" action="/ParkKoWeb/UserServlet"
+		<form class="form-horizontal" action="/web/ParkSearchServlet"
 			method="post">
 		<tr>
 			<td width="160" height="160" style="background-color: #ff93a9">
-				<img src="hellotopo.jpg" class="img-rounded">
+				<H1 align="center" >Park-Ko</H1>
 			</td>
 		</tr>
 
@@ -59,7 +63,7 @@
 				<div class="form-group">
 					<label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
 					<div class="col-sm-10">
-						<input id="txtCarID" type="text" class="form-control"
+						<input id="txtCarID" name="txtCarID"  type="text" class="form-control"
 							placeholder="กรุณาระบุทะเบียนรถ">
 					</div>
 				</div>
@@ -70,8 +74,8 @@
 				<div class="form-group">
 					<label for="lstProvince" class="col-sm-2 control-label">จังหวัด</label>
 					<div class="dropdown col-sm-10">
-						<select class="form-control" id="lstProvince">
-							<option value="" selected>--------- เลือกจังหวัด
+						<select class="form-control" id="lstProvince" name="lstProvince">
+							<option value="111" selected>--------- เลือกจังหวัด
 								---------</option>
 							<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 							<option value="กระบี่">กระบี่</option>
@@ -161,7 +165,7 @@
 			<td style="background-color: white">
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-primary">
+						<button id="btnSearch" type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 							ค้นหา
 						</button>

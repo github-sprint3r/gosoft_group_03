@@ -3,9 +3,6 @@ package business;
 import java.sql.Timestamp;
 
 import org.junit.Test;
-
-import business.CalculateParkKo;
-import business.DateTimeHelper;
 import static org.junit.Assert.*;
 
 public class CalculateParkKoTest {
@@ -26,11 +23,11 @@ public class CalculateParkKoTest {
 
 	@Test
 	public void testCalculateParkHours_Lampang() {
-		String timeLampangStart = "25/12/2014 09:00 PM";
-		String timeLampangEnd = "26/12/2014 06:30 AM";
+		String timeBangkokStart = "25/12/2014 09:00 PM";
+		String timeBangkokEnd = "26/12/2014 06:30 AM";
 
-		Timestamp startTime = DateTimeHelper.getTimestamp(timeLampangStart);
-		Timestamp endTime = DateTimeHelper.getTimestamp(timeLampangEnd);
+		Timestamp startTime = DateTimeHelper.getTimestamp(timeBangkokStart);
+		Timestamp endTime = DateTimeHelper.getTimestamp(timeBangkokEnd);
 
 		int expectedHour = 10;
 		int actualHour = calculate.calculateRoundUpParkHour(startTime, endTime);
@@ -52,11 +49,11 @@ public class CalculateParkKoTest {
 
 	@Test
 	public void testCalculateSpecialHour_Lampang() {
-		String timeLampangkStart = "25/12/2014 09:00 PM";
-		String timeLampangEnd = "26/12/2014 06:30 AM";
+		String timeBangkokStart = "25/12/2014 09:00 PM";
+		String timeBangkokEnd = "26/12/2014 06:30 AM";
 
-		Timestamp startTime = DateTimeHelper.getTimestamp(timeLampangkStart);
-		Timestamp endTime = DateTimeHelper.getTimestamp(timeLampangEnd);
+		Timestamp startTime = DateTimeHelper.getTimestamp(timeBangkokStart);
+		Timestamp endTime = DateTimeHelper.getTimestamp(timeBangkokEnd);
 
 		int expectedHour = 3;
 		int actualHour = calculate.calculateSpecialHour(startTime, endTime);

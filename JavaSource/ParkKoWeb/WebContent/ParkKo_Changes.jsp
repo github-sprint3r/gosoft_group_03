@@ -39,7 +39,7 @@
 </style>
 </head>
 
-<body background="Main_BG.png">
+<body style="background-color: #ffcccc">
 	<div class="container-fluid">
 
 		<form>
@@ -52,7 +52,8 @@
 						</td>
 						<td style="background-color: #ff93a9">
 							<div align="center">
-								<font color="white" size="6">สวัสดี</font>
+								<H1>Park-Ko</H1>
+								<font color="black" size="6">สวัสดี</font>
 							</div>
 						</td>
 					</tr>
@@ -61,13 +62,13 @@
 						<td style="background-color: white">
 							<div class="row">
 								<div class="col-md-4">
-									<label for="TxTName"><font color="#66CCCC">ชื่อ</font></label>
-									<label id="LbName"> <% %>
+									<label for="TxTName"><font color="black">ชื่อ</font></label>
+									<label id="LbName" name="LbName"> <% %>
 									</label>
 								</div>
 								<div class="col-md-4">
-									<label for="TxTSurname"><font color="#66CCCC">นามสกุล</font></label>
-									<label id="LbSurname"> <% %>
+									<label for="TxTSurname"><font color="black">นามสกุล</font></label>
+									<label id="LbSurname" name="LbSurname"> <% %>
 									</label>
 								</div>
 							</div>
@@ -76,65 +77,65 @@
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTCarID"><font
-								color="#66CCCC">ทะเบียนรถ</font></label> <label id="LbCarId"> <% %>
+								color="black">ทะเบียนรถ</font></label> <label id="LbCarId" name="LbCarId"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTProvince"><font
-								color="#66CCCC">จังหวัด</font></label> <label id="LbProvice"> <% %>
+								color="black">จังหวัด</font></label> <label id="LbProvice" name="LbProvice"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTEntrytime"><font
-								color="#66CCCC">วัน เวลาเข้า</font></label> <label id="LbEntrytime">
+								color="black">วัน เวลาเข้า</font></label> <label id="LbEntrytime" name="LbEntrytime">
 								<% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTExittime"><font
-								color="#66CCCC">วัน เวลา ออก</font></label> <label id="LbExittime">
+								color="black">วัน เวลา ออก</font></label> <label id="LbExittime" name="LbExittime">
 								<% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="TxTPayamountt"><font color="#FF6699">ค่าจอด</font></label>
+								<label for="TxTPayamount"><font color="black">ค่าจอด</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="LbPayamountt"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td style="background-color: white">
-							<div align="center">
-								<label for="TxTRecAmt"><font color="#FF6699">รับเงิน</font></label>
-							</div>
-						</td>
-						<td style="background-color: white">
-							<div align="center">
-								<label for="LbRecAmt"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
+								<label id="LbPayamount" name="LbPayamount" for="LbPayamount"> <% %>
+								</label> <label><font color="black">บาท</font></label>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="TxTChanges"><font color="#FF6699">ทอนเงิน</font></label>
+								<label id="TxTRecAmt" name="TxTRecAmt" for="TxTRecAmt"><font color="black">รับเงิน</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="LbChanges"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
+								<label id="LbRecAmt" name="LbRecAmt" for="LbRecAmt"> <% %>
+								</label> <label><font color="black">บาท</font></label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color: white">
+							<div align="center">
+								<label for="TxTChanges"><font color="black">ทอนเงิน</font></label>
+							</div>
+						</td>
+						<td style="background-color: white">
+							<div align="center">
+								<label id="LbChanges" name="LbChanges" for="LbChanges"> <% %>
+								</label> <label><font color="black">บาท</font></label>
 							</div>
 						</td>
 					</tr>

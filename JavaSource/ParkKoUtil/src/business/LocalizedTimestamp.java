@@ -3,10 +3,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 public class LocalizedTimestamp extends java.sql.Timestamp implements Serializable{
-
-	private static final long serialVersionUID = 1L;
-
-	public static LocalizedTimestamp toLocalizedTimestamp(Date date) {
+	 public static LocalizedTimestamp toLocalizedTimestamp(Date date) {
 	        return (date == null) ? null : new LocalizedTimestamp( date.getTime() );
 	    }
 	    public static LocalizedTimestamp toLocalizedTimestamp(Date date, Calendar calendar) {
