@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+bean.DisplayData display = (bean.DisplayData)request.getSession().getAttribute("display");
+ %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -67,12 +70,12 @@
 							<div class="row">
 								<div class="col-md-4">
 									<label for="TxTName"><font color="black">ชื่อ</font></label>
-									<label id="LbName" name="LbName"> <% %>
+									<label id="LbName" name="LbName">  <%=display.getName() %>
 									</label>
 								</div>
 								<div class="col-md-4">
 									<label for="TxTSurname"><font color="black">นามสกุล</font></label>
-									<label id="LbSurname" name="LbSurname"> <% %>
+									<label id="LbSurname" name="LbSurname">  <%=display.getSurname() %>
 									</label>
 								</div>
 							</div>

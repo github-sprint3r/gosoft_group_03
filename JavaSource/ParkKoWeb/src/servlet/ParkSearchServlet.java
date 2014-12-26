@@ -52,7 +52,8 @@ public class ParkSearchServlet extends HttpServlet {
 		display.setParkFee(new CalculateFee().calculateFee(normalTime, specialParkTime));
 		
 		// store data in session
-		  HttpSession session = request.getSession();
+		request.setAttribute("display", display);
+		  HttpSession session = request.getSession(true);
 		  session.setAttribute("display", display);
 
 		  // forward the request (not redirect)
