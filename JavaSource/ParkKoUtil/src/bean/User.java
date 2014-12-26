@@ -114,11 +114,11 @@ public class User {
 				return false;
 		} else if (!carId.equals(other.carId))
 			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
+//		if (name == null) {
+//			if (other.name != null)
+//				return false;
+//		} else if (!name.equals(other.name))
+//			return false;
 		
 		if (province == null) {
 			if (other.province != null)
