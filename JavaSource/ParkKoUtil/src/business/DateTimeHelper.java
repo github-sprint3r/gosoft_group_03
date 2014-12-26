@@ -16,7 +16,7 @@ import org.joda.time.format.DateTimeFormatter;
 
 
 public class DateTimeHelper {
-    protected static String defaultPattern = "dd/MM/yyyy hh:mm";
+    protected static String defaultPattern = "dd/MM/yyyy hh:mm a";
     protected static Locale defaultLocale = Locale.getDefault();
     private static Hashtable<String, DateFormat> _dateFormatCache = new Hashtable<String, DateFormat>();
 
