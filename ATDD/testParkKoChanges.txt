@@ -1,16 +1,29 @@
 ﻿*** Settings ***
 Library    Selenium2Library    
 
+
 *** Variables ***
-${URL_Search}   http://27.254.142.75/ParkKoWeb/ParkKo_Search.jsp
+${URL_Search}   http://27.254.142.75/web/ParkKo_Search.jsp
 
 *** Testcases ***
-ทดสอบการคำนวณเงินทอน สมเกียรติ ปุ๋ยสูงเนิน
-    Open Browser    ${URL_Search}
-    Input Text    txtCarID    สฬ5420
-    Select From List By Value    lstProvince    กรุงเทพมหานคร
-    Click Button    ค้นหา
-    
+ทดสอบการคำนวณเงินของสมกียรติ ปุ๋ยสูงเนิน
+    แสดงข้อมูลและรับเงินของสมเกียรติ ปุ๋ยสูงเนิน
+ 
+ทดสอบการคำนวณเงินของธวัชชัย จงสุวรรณไพศาล
+    แสดงข้อมูลและรับเงินของธวัชชัย จงสุวรรณไพศาล
+
     Close All Browsers
 
 *** Keyword ***
+แสดงข้อมูลและรับเงินของสมเกียรติ ปุ๋ยสูงเนิน
+    Open Browser    ${URL_Search}
+    Input Text    txtCarID    สฬ5420
+    Select From List By Value    lstProvince    กรุงเทพมหานคร
+    Click Button    btnSearch
+    
+แสดงข้อมูลและรับเงินของธวัชชัย จงสุวรรณไพศาล
+    Open Browser    ${URL_Search}
+    Input Text    txtCarID    ณข9620
+    Select From List By Value    lstProvince    ลำปาง
+    Click Button    btnSearch
+    
