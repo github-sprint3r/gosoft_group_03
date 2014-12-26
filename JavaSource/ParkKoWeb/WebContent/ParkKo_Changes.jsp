@@ -39,7 +39,7 @@
 </style>
 </head>
 
-<body role="document" background="Main_BG.png">
+<body background="Main_BG.png">
 	<div class="container-fluid">
 
 		<form>
