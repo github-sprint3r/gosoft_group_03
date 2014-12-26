@@ -123,7 +123,7 @@
 							<div align="center">
 								<input id="TxTRecAmt" name="TxTRecAmt" for="LbRecAmt"> <% %>
 								<label><font color="black">บาท</font></label>
-								<button type="submit" class="btn btn-primary">รับเงิน</button> <% %>
+								<button id="btnReceive" type="submit" class="btn btn-primary">รับเงิน</button> <% %>
 							</div>
 						</td>
 					</tr>
