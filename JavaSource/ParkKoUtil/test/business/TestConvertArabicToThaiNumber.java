@@ -23,6 +23,7 @@ public class TestConvertArabicToThaiNumber {
 
 		assertEquals(expecterResult, actualResult);
 	}
+
 	@Test
 	public void put_2014_12_25_21_00_00_should_be_convert_to_๒๐๑๔_๑๒_๒๕_๒๑_๐๐_๐๐() {
 		String expecterResult = "๒๐๑๔-๑๒-๒๕ ๒๑:๐๐:๐๐";
@@ -30,6 +31,7 @@ public class TestConvertArabicToThaiNumber {
 
 		assertEquals(expecterResult, actualResult);
 	}
+
 	@Test
 	public void put_2014_12_24_13_50_00_should_be_convert_to_๒๐๑๔_๑๒_๒๔_๑๓_๕๐_๐๐() {
 		String expecterResult = "๒๐๑๔-๑๒-๒๔ ๑๓:๕๐:๐๐";
