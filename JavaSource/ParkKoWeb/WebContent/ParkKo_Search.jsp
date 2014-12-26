@@ -40,6 +40,10 @@
 	align: center;
 	border-color: black;
 }
+.btn-search {
+	background-color:#ff93a9;
+	color:black;
+}
 </style>
 </head>
 <body role="document" style="background-color: #ffcccc">
@@ -161,7 +165,7 @@
 			<td style="background-color: white">
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button id="btnSearch" type="submit" class="btn btn-primary">
+						<button id="btnSearch" type="submit" class="btn btn-search" >
 							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 							ค้นหา
 						</button>
