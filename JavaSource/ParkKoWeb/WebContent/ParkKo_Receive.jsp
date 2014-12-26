@@ -120,8 +120,8 @@
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="LbRecAmt"> <% %>
-								</label> <label><font color="#FF6699">บาท</font></label>
+								<input id="TxTRecAmt" for="LbRecAmt"> <% %>
+								<label><font color="#FF6699">บาท</font></label>
 								<button type="submit" class="btnReceive">รับเงิน</button> <% %>
 							</div>
 						</td>
