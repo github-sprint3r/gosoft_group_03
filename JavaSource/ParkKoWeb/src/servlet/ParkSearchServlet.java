@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bean.DisplayData;
+import bean.ParkTransaction;
+import bean.User;
+import business.CalculateParkKo;
 import db.DBData;
-import bean.*;
 
 /**
  * Servlet implementation class ParkSearchServlet
@@ -36,10 +39,31 @@ public class ParkSearchServlet extends HttpServlet {
 		User user = data.getUser(carId, provice, "");
 		ParkTransaction transaction = data.getParkTransaction(carId, provice, "");
 		
-		pw.append("<p> "+ user.toString());
-		pw.append("<p> "+ transaction.toString());
+		CalculateParkKo fee = new CalculateParkKo();
+		int totalTime = fee.calculateRoundUpParkHour(transaction.getStartTime(), transaction.getEndTime());
+		int specialParkTime = fee.calculateSpecialHour(transaction.getStartTime(), transaction.getEndTime());
+		int normalTime = totalTime - specialParkTime;
+		DisplayData display = getDisplayData( user, transaction, normalTime,specialParkTime );
+		pw.append("<p> "+ display.toString());
+//		pw.append("<p> "+ transaction.toString());
+//		pw.append("<p> TotalTime = "+ totalTime);
+		
 		pw.flush();
 		pw.close();
+	}
+	
+	public DisplayData getDisplayData(User user,ParkTransaction transaction,int normalTime, int specialTime  ){
+		DisplayData data = new DisplayData();
+		data.setCarId(user.getCarId());
+		data.setProvince(user.getProvince());
+		data.setName(user.getName());
+		data.setSurname(user.getSurname());
+		data.setPicture(user.getPicture());
+		data.setStartTime(transaction.getStartTime());
+		data.setEndTime(transaction.getEndTime());
+		data.setTotalNormalParkTime(normalTime);
+		data.setTotalSpecialTime(specialTime);
+		return data;
 	}
 
 }

@@ -12,8 +12,8 @@ import bean.User;
 public class DBData {
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
-	//static final String DB_URL = "jdbc:mysql://27.254.142.75/ParkKoDB";
+	//static final String DB_URL = "jdbc:mysql://localhost/ParkKoDB";
+	static final String DB_URL = "jdbc:mysql://27.254.142.75/ParkKoDB";
 	
 	//static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User WHERE CAR_ID = ? AND PROVINCE = ? AND NAME = ? ";
 	static final String SQL_USER_PK = "SELECT CAR_ID, PROVINCE, NAME, SURNAME, PICTURE FROM ParkKoDB.User";
