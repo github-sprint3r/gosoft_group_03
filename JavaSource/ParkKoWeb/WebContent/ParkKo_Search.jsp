@@ -40,6 +40,10 @@
 	align: center;
 	border-color: black;
 }
+.btn-primary {
+	background-color:pink;
+	color:black;
+}
 </style>
 </head>
 <body role="document" style="background-color: #ffcccc">

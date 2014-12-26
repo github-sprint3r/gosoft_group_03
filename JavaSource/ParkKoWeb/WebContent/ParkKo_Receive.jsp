@@ -36,6 +36,10 @@
 	align: center;
 	border-color: black;
 }
+.btn-primary {
+	background-color:pink;
+	color:black;
+}
 </style>
 </head>
 
