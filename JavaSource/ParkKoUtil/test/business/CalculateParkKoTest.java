@@ -33,5 +33,32 @@ public class CalculateParkKoTest {
 		int actualHour = calculate.calculateRoundUpParkHour(startTime, endTime);
 		assertEquals(expectedHour, actualHour);
 	}
+	
+	@Test
+	public void testCalculateSpecialHour_Bangkok() {
+		String timeBangkokStart = "24/12/2014 01:50 PM";
+		String timeBangkokEnd = "26/12/2014 04:02 PM";
+		
+		Timestamp startTime = DateTimeHelper.getTimestamp(timeBangkokStart);
+		Timestamp endTime = DateTimeHelper.getTimestamp(timeBangkokEnd);
+		
+		int expectedHour = 6;
+		int actualHour = calculate.calculateSpecialHour(startTime, endTime);
+		assertEquals(expectedHour, actualHour);
+	}
+	
+	@Test
+	public void testCalculateSpecialHour_Lampang() {
+		String timeBangkokStart = "25/12/2014 09:00 PM";
+		String timeBangkokEnd = "26/12/2014 06:30 AM";
+		
+		Timestamp startTime = DateTimeHelper.getTimestamp(timeBangkokStart);
+		Timestamp endTime = DateTimeHelper.getTimestamp(timeBangkokEnd);
+		
+		int expectedHour = 3;
+		int actualHour = calculate.calculateSpecialHour(startTime, endTime);
+		assertEquals(expectedHour, actualHour);
+	}
+
 
 }
