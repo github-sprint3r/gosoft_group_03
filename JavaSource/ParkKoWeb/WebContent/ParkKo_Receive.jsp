@@ -11,7 +11,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 
-<title>Park-Ko Changes</title>
+<title>Park-Ko Receive</title>
 
 <!-- Bootstrap core CSS -->
 <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -62,12 +62,12 @@
 							<div class="row">
 								<div class="col-md-4">
 									<label for="TxTName"><font color="#66CCCC">ชื่อ</font></label>
-									<label id="LbName"> <% %>
+									<label id="LbName" name="LbName"> <% %>
 									</label>
 								</div>
 								<div class="col-md-4">
 									<label for="TxTSurname"><font color="#66CCCC">นามสกุล</font></label>
-									<label id="LbSurname"> <% %>
+									<label id="LbSurname" name="LbSurname"> <% %>
 									</label>
 								</div>
 							</div>
@@ -76,26 +76,26 @@
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTCarID"><font
-								color="#66CCCC">ทะเบียนรถ</font></label> <label id="LbCarId"> <% %>
+								color="#66CCCC">ทะเบียนรถ</font></label> <label id="LbCarId" name="LbCarId"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTProvince"><font
-								color="#66CCCC">จังหวัด</font></label> <label id="LbProvice"> <% %>
+								color="#66CCCC">จังหวัด</font></label> <label id="LbProvice" name="LbProvice"> <% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTEntrytime"><font
-								color="#66CCCC">วัน เวลาเข้า</font></label> <label id="LbEntrytime">
+								color="#66CCCC">วัน เวลาเข้า</font></label> <label id="LbEntrytime" name="LbEntrytime">
 								<% %>
 						</label></td>
 					</tr>
 					<tr>
 						<td style="background-color: white"></td>
 						<td style="background-color: white"><label for="TxTExittime"><font
-								color="#66CCCC">วัน เวลา ออก</font></label> <label id="LbExittime">
+								color="#66CCCC">วัน เวลา ออก</font></label> <label id="LbExittime" name="LbExittime">
 								<% %>
 						</label></td>
 					</tr>
@@ -107,7 +107,7 @@
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="lbTotaltime"> <% %>
+								<label for="lbTotaltime" id="lbTotaltime" name="lbTotaltime"> <% %>
 								</label> <label><font color="#FF6699">ชั่วโมง</font></label>
 							</div>
 						</td>
@@ -120,7 +120,7 @@
 						</td>
 						<td style="background-color: white">
 							<div align="center">
-								<input id="TxTRecAmt" for="LbRecAmt"> <% %>
+								<input id="TxTRecAmt" name="TxTRecAmt" for="LbRecAmt"> <% %>
 								<label><font color="#FF6699">บาท</font></label>
 								<button type="submit" class="btnReceive">รับเงิน</button> <% %>
 							</div>
