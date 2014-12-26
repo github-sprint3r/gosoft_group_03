@@ -39,7 +39,7 @@
 </style>
 </head>
 
-<body role="document" background="Main_BG.png">
+<body background="Main_BG.png">
 	<div class="container-fluid">
 
 		<form>
@@ -128,7 +128,7 @@
 					<tr>
 						<td style="background-color: white">
 							<div align="center">
-								<label for="TxTChanges"><font color="#FF6699">รับเงิน</font></label>
+								<label for="TxTChanges"><font color="#FF6699">ทอนเงิน</font></label>
 							</div>
 						</td>
 						<td style="background-color: white">
