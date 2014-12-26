@@ -45,7 +45,7 @@
 <body role="document" style="background-color: #ffcccc">
 
 	<table align="center" class="table table-striped">
-		<form class="form-horizontal" action="/ParkKoWeb/UserServlet"
+		<form class="form-horizontal" action="/web/ParkSearchServlet"
 			method="post">
 		<tr>
 			<td width="160" height="160" style="background-color: #ff93a9">
@@ -59,7 +59,7 @@
 				<div class="form-group">
 					<label for="txtCarID" class="col-sm-2 control-label">ทะเบียนรถ</label>
 					<div class="col-sm-10">
-						<input id="txtCarID" type="text" class="form-control"
+						<input id="txtCarID" name="txtCarID"  type="text" class="form-control"
 							placeholder="กรุณาระบุทะเบียนรถ">
 					</div>
 				</div>
@@ -70,8 +70,8 @@
 				<div class="form-group">
 					<label for="lstProvince" class="col-sm-2 control-label">จังหวัด</label>
 					<div class="dropdown col-sm-10">
-						<select class="form-control" id="lstProvince">
-							<option value="" selected>--------- เลือกจังหวัด
+						<select class="form-control" id="lstProvince" name="lstProvince">
+							<option value="111" selected>--------- เลือกจังหวัด
 								---------</option>
 							<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 							<option value="กระบี่">กระบี่</option>
