@@ -3,15 +3,18 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import bean.DisplayData;
 import bean.ParkTransaction;
 import bean.User;
+import business.CalculateFee;
 import business.CalculateParkKo;
 import db.DBData;
 
@@ -34,7 +37,7 @@ public class ParkSearchServlet extends HttpServlet {
 		String carId = request.getParameter("txtCarID");
 		String provice = request.getParameter("lstProvince");
 		
-		PrintWriter pw = response.getWriter();
+	//	PrintWriter pw = response.getWriter();
 		
 		
 		DBData data = new DBData();
@@ -46,12 +49,20 @@ public class ParkSearchServlet extends HttpServlet {
 		int specialParkTime = fee.calculateSpecialHour(transaction.getStartTime(), transaction.getEndTime());
 		int normalTime = totalTime - specialParkTime;
 		DisplayData display = getDisplayData( user, transaction, normalTime,specialParkTime );
-		pw.append("<p> "+ display.toString());
-//		pw.append("<p> "+ transaction.toString());
-//		pw.append("<p> TotalTime = "+ totalTime);
+		display.setParkFee(new CalculateFee().calculateFee(normalTime, specialParkTime));
 		
-		pw.flush();
-		pw.close();
+		// store data in session
+		  HttpSession session = request.getSession();
+		  session.setAttribute("display", display);
+
+		  // forward the request (not redirect)
+		  RequestDispatcher dispatcher = request.getRequestDispatcher("ParkKo_Receive.jsp");
+		  dispatcher.forward(request, response);
+//		pw.append("<p> "+ display.toString());
+//
+//		
+//		pw.flush();
+//		pw.close();
 	}
 	
 	public DisplayData getDisplayData(User user,ParkTransaction transaction,int normalTime, int specialTime  ){
