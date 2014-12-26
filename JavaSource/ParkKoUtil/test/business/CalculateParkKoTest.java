@@ -10,8 +10,8 @@ public class CalculateParkKoTest {
 
 	@Test
 	public void testCalculateParkHours_Bangkok() {
-		String timeBangkokStart = "24/12/2014 13:50";
-		String timeBangkokEnd = "26/12/2014 16:02";
+		String timeBangkokStart = "24/12/2014 01:50 PM";
+		String timeBangkokEnd = "26/12/2014 04:02 PM";
 		
 		Timestamp startTime = DateTimeHelper.getTimestamp(timeBangkokStart);
 		Timestamp endTime = DateTimeHelper.getTimestamp(timeBangkokEnd);
